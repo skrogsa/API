@@ -12,13 +12,13 @@ async function fetchCatFact() {
         // En variabel som venter på at et løfte er oppnådd for å lagre dataen som ble hentet i variabelen response
         const catData = await response.json();
 
-        for (let i = 0; i < catData.data.length; i++) {
-            console.log(catData.data[i].fact);
+        for (let i = 0; i < 0; i++) {
+            console.log(cat.fact);
         }
         
         //SEND
         //Viser dataen hentet til console
-        console.log(data);
+        console.log(catData);
 // hvis console.log(data.fact); får kun opp fact og ikkje length på string, hvis kun data, får alt
    
 
@@ -35,7 +35,7 @@ async function fetchCatFact() {
 }
 
 fetchCatFact();
-/* Metode 2 response.then() */
+
 
 
 
@@ -43,3 +43,13 @@ fetchCatFact();
   if (!response.ok) {
     throw new error('Failed to fetch cat fact');
 }*/
+
+
+
+/* Metode 2 response.then() */
+
+function catFactGenerator() {
+    fetch("https://catfact.ninja/facts").then((response) => {
+        response.json();
+    }).then()
+}
